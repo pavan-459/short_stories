@@ -1,25 +1,45 @@
 {
   "expo": {
-    "name": "shortstories",
-    "slug": "shortstories",
+    "name": "Storypop",
+    "slug": "storypop",
     "version": "1.0.0",
-    "orientation": "portrait",
+    "orientation": "default",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
+    "backgroundColor": "#FFF4F8",
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.pknimmakuri.storypop",
+      "buildNumber": "1",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      }
     },
     "android": {
+      "package": "com.pknimmakuri.storypop",
+      "versionCode": 1,
       "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
+        "backgroundColor": "#FFF4F8",
         "foregroundImage": "./assets/android-icon-foreground.png",
         "backgroundImage": "./assets/android-icon-background.png",
         "monochromeImage": "./assets/android-icon-monochrome.png"
       },
+      "permissions": [],
       "predictiveBackGestureEnabled": false
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "plugins": [
+      "expo-sharing",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Storypop uses your photos to add pictures to the stories you make. Pictures stay on this device.",
+          "cameraPermission": "Storypop uses the camera so you can snap a picture for a story page. Pictures stay on this device.",
+          "microphonePermission": false
+        }
+      ]
+    ]
   }
 }
